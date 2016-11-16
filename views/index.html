@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home Page-TourSL</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script type="text/javascript">
+			function initialize(){
+				var Colombo=new google.maps.LatLng(6.9271,79.8612);
+				var mapProp={
+					center:Colombo,
+					zoom:7,
+					mapType:google.maps.MapTypeId.ROADMAP
+				};
+				var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				var marker=new google.maps.Marker({
+					position:Colombo,
+				});
+				marker.setMap(map);
+			}
+			google.maps.event.addDomListener(window,'load',initialize);
+		</script>	
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">TourSL</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="login.html">Forum</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact US</a>
+                    </li>
+                
+                </ul>
+                <form action="" method="get">
+                	<input type="text" name="search" placeholder="place your search hear" class="text">
+                	<input type="submit" value="Search" class="button">
+                </form>
+      				
+
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Categories</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Adventure</a>
+                    <a href="#" class="list-group-item">Historical</a>
+                    <a href="#" class="list-group-item">Beaches</a>
+                    <a href="#" class="list-group-item">Sightseeing</a>
+                    <a href="#" class="list-group-item">Camping</a>
+                    <a href="#" class="list-group-item">Waterfall hunting</a>
+                    <a href="#" class="list-group-item">Climate</a>
+                    <a href="#" class="list-group-item">Cities</a>
+                    <a href="#" class="list-group-item">Foods</a>
+                    <a href="#" class="list-group-item">Hotels</a>
+                </div>
+                <input type="image" name="map" src="images/map.png" data-target="#mapmodals" data-toggle="modal" class="map">
+                    <div class="modal fade" id="mapmodals" role="dialog">
+	                	<div class="modal-dialog"></div>
+	                		<div class="modal-content">
+	                			<div class="modal-header">
+	                				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	                				<h3</h3>
+	                			</div>
+	                			<div class="modal-body">
+	                				<div id="googleMap" style="height:500px;"></div>
+	                			</div>
+	                			<div class="modal-footer">
+	                				<button type="button" class="btn btn-defaoult" data-dismiss="modal">Close</button>
+	                			</div>
+	                		</div>
+	                	</div>
+            		</div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="images/2.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="images/1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="images/3.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="images/4.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="images/6.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/stclairs.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"></h4>
+                                <h4>St.Clairs</h4>
+                                <p><button type="button" class="btn btn-info btn-sm" data-target="#myModal_1" data-toggle="modal">See more</button></p>
+                            </div>
+                            <!--<div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal_1" role="dialog">
+	                	<div class="modal-dialog"></div>
+	                		<div class="modal-content">
+	                			<div class="modal-header">
+	                				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	                				<h3>St.Clairs Waterfall</h3>
+	                			</div>
+	                			<div class="modal-body">
+	                			<img src="images/stclairs.jpg" alt="">
+	                				<p>dnefoiiiciwvjvjosiccki</p>
+	                			</div>
+	                			<div class="modal-footer">
+	                				<button type="button" class="btn btn-defaoult" data-dismiss="modal">Close</button>
+	                			</div>
+	                		</div>
+	                </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/sigiriya.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"></h4>
+                                <h4>Sigiriya</h4>
+                                <p><button type="button" class="btn btn-info btn-sm" data-target="#myModal_2" data-toggle="modal">See more</button></p>
+                            </div>
+                            <!--<div class="ratings">
+                                <p class="pull-right">12 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal_2" role="dialog">
+	                	<div class="modal-dialog"></div>
+	                		<div class="modal-content">
+	                			<div class="modal-header">
+	                				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	                				<h3>Sigiriya</h3>
+	                				<img src="images/sigiriya2.jpg" alt="" style="display:block;margin:auto;width:800px;height:600;">
+	                			</div>
+	                			<div class="modal-body">
+	                				<p> is an ancient rock fortress located in the central Matale District near the town of Dambulla in the Central Province, Sri Lanka. The name refers to a site of historical and archaeological significance that is dominated by a massive column of rock nearly 200 metres (660 ft) high. According to the ancient Sri Lankan chronicle the Culavamsa, this site was selected by King Kasyapa (477 – 495 CE) for his new capital. He built his palace on the top of this rock and decorated its sides with colourful frescoes. On a small plateau about halfway up the side of this rock he built a gateway in the form of an enormous lion. The name of this place is derived from this structure —Sīhāgiri, the Lion Rock. The capital and the royal palace was abandoned after the king's death. It was used as a Buddhist monastery until the 14th century.</p>
+	                			</div>
+	                			<div class="modal-footer">
+	                				<button type="button" class="btn btn-defaoult" data-dismiss="modal">Close</button>
+	                			</div>
+	                		</div>
+	                </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/hortanplains.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"></h4>
+                                <h4>Horton Plains</h4>
+                                <p><button type="button" class="btn btn-info btn-sm" data-target="#myModal_3" data-toggle="modal">See more</button></p>
+                            </div>
+                            <!--<div class="ratings">
+                                <p class="pull-right">31 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal_3" role="dialog">
+	                	<div class="modal-dialog"></div>
+	                		<div class="modal-content">
+	                			<div class="modal-header">
+	                				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	                				<h3>Horton Plains</h3>
+	                				<img src="images/hortanplains.jpg" alt="">
+	                			</div>
+	                			<div class="modal-body">
+	                				<p>dnefoiiiciwvjvjosiccki</p>
+	                			</div>
+	                			<div class="modal-footer">
+	                				<button type="button" class="btn btn-defaoult" data-dismiss="modal">Close</button>
+	                			</div>
+	                		</div>
+	                </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/aukana.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"></h4>
+                                <h4>Aukana Buddha Statue</h4>
+                                <p><button type="button" class="btn btn-info btn-sm" data-target="#myModal_4" data-toggle="modal">See more</button></p>
+                            </div>
+                            <!--<div class="ratings">
+                                <p class="pull-right">6 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal_4" role="dialog">
+	                	<div class="modal-dialog"></div>
+	                		<div class="modal-content">
+	                			<div class="modal-header">
+	                				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	                				<h3>Aukana Buddha Statue</h3>
+	                				<img src="images/aukana.jpg" alt="">
+	                			</div>
+	                			<div class="modal-body">
+	                				<p>dnefoiiiciwvjvjosiccki</p>
+	                			</div>
+	                			<div class="modal-footer">
+	                				<button type="button" class="btn btn-defaoult" data-dismiss="modal">Close</button>
+	                			</div>
+	                		</div>
+	                </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/yala.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right"></h4>
+                                <h4>Yala National Park</h4>
+                                <p><button type="button" class="btn btn-info btn-sm" data-target="#myModal_5" data-toggle="modal">See more</button></p>
+                            </div>
+                            <!--<div class="ratings">
+                                <p class="pull-right">18 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal_5" role="dialog">
+	                	<div class="modal-dialog"></div>
+	                		<div class="modal-content">
+	                			<div class="modal-header">
+	                				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	                				<h3>Yala Nationl Park</h3>
+	                				<img src="images/yala.jpg" alt="">
+	                			</div>
+	                			<div class="modal-body">
+	                				<p>dnefoiiiciwvjvjosiccki</p>
+	                			</div>
+	                			<div class="modal-footer">
+	                				<button type="button" class="btn btn-defaoult" data-dismiss="modal">Close</button>
+	                			</div>
+	                		</div>
+	                </div>
+	                <div class="col-sm-4 col-lg-4 col-md-4">
+	                        <div class="thumbnail">
+	                            <img src="images/pasikuda.jpg" alt="">
+	                            <div class="caption">
+	                                <h4 class="pull-right"></h4>
+	                                <h4>Pasikuda</h4>
+	                                <p><button type="button" class="btn btn-info btn-sm" data-target="#myModal_6" data-toggle="modal">See more</button></p>
+	                            </div>
+	                            <div class="ratings">
+	                                
+	                               <!-- <p>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star"></span>
+	                                    <span class="glyphicon glyphicon-star-empty"></span>
+	                                </p>-->
+	                            </div>
+	                    	</div>
+	                </div>    
+	                <div class="modal fade" id="myModal_6" role="dialog">
+	                	<div class="modal-dialog"></div>
+	                		<div class="modal-content">
+	                			<div class="modal-header">
+	                				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	                				<h3>Pasikuda</h3>
+	                				<img src="images/pasikuda.jpg" alt="">
+	                			</div>
+	                			<div class="modal-body">
+	                				<p>dnefoiiiciwvjvjosiccki</p>
+	                			</div>
+	                			<div class="modal-footer">
+	                				<button type="button" class="btn btn-defaoult" data-dismiss="modal">Close</button>
+	                			</div>
+	                		</div>
+	                </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <h4><a href="#"></a>
+                        </h4>
+                     <!--   <p>If you like this template, then check out <a target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this tutorial</a> on how to build a working review system for your online store!</p>
+                        <a class="btn btn-primary" target="_blank" href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">View Tutorial</a>-->
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+           <!-- <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>-->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
