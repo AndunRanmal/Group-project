@@ -18,6 +18,13 @@
           href="https://fonts.googleapis.com/css?family=Droid Sans">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Josefin Slab">
+
+     
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     <style>
      
       p{

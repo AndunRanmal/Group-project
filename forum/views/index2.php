@@ -106,7 +106,7 @@
 			                    			echo "<h4 class='pull-right'></h4>";
 			                    			
 			                    			echo "<p>" .$row["cat_desc"]."</p>";
-			                    			echo "<button type='button' class='btn btn-info btn-sm'>See more</button>";
+			                    			echo "<button type='button' class='btn btn-info btn-sm' name='".$row["cat_id"]."' id='seemore' onclick='myFunction();'>See more</button>";
 			                    			echo  "<button style='float:right;' type='button' class='btn btn-info btn-sm' name='".$row["cat_name"]."##".$row['cat_id']."' id='new_topic' >New Topic</button>";
 			                    		echo "</div>";
 			                    		
@@ -158,7 +158,11 @@
  <?php
 	include("../include/footer.php");
 ?>  	
-
+<script type="text/javascript">
+	function myFunction(){
+		window.location.href='Topic_view.php';
+	}
+</script>
 
 
 
@@ -200,6 +204,24 @@
 		$('#modal_topic').modal('show');
 	});
 
+</script>
+
+<script type="text/javascript">
+	$('.row').on('click','#seemore',function(){
+		var name = $(this).attr('name');
+		console.log(name);
+		$.ajax({
+			
+			url:"/project/forum/views/Topic_view.php",
+			method:"POST",
+			data:{
+				category:name
+			},
+			success:function(response){
+				$('#result').html(response);
+			}
+		});
+	});
 </script>
 
 <!--<script type="text/javascript">
