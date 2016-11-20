@@ -57,17 +57,15 @@
                     }else{
                         echo "<a href='../../views/login.php'>";
                     }
+
                     ?>
                     </li>
                     <li>
                         <a href="#">Contact US</a>
                     </li>
-                
+                    
                 </ul>
-                <form action="../../php/search.php" method="get" name="search_form" onSubmit="return testsearch()">
-                	<input type="text" name="search" placeholder="place your search hear" class="text">
-                	<input type="submit" name="go" value="Search" class="button">
-                </form>
+                
       				
 
             <!-- /.navbar-collapse -->

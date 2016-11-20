@@ -1,7 +1,7 @@
 <?php
 	include("../include/header.php");
 	include("../../config/config.php");
-
+	session_start(cat);
 	if(!empty($_POST)){
 	$cat=$_POST["category"];
 
@@ -19,7 +19,7 @@
 			 $_SESSION["cat_id"] = $row["cat_id"];
 			 $_SESSION["cat_name"] = $row["cat_name"];
 			 $_SESSION["cat_des"] = $row["cat_desc"];
-			 $_SESSION[""] = $row["photo"];
+			 $_SESSION["photo"] = $row["photo"];
 		}
 
 

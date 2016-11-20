@@ -160,7 +160,7 @@
 ?>  	
 <script type="text/javascript">
 	function myFunction(){
-		window.location.href='Topic_view.php';
+		window.location.href='x.php';
 	}
 </script>
 
@@ -219,6 +219,7 @@
 			},
 			success:function(response){
 				$('#result').html(response);
+				
 			}
 		});
 	});
