@@ -18,12 +18,11 @@
 
 		$query = "insert into topics (topic_subject,topic_date,topic_cat,topic_by) values ('$subject',NOW(),$cat,$user)";
 		$topic_id = mysqli_insert_id($conn);
+		
 		if(mysqli_query($conn,$query)){
-			 //echo "<script>
-			 //alert('New Topic added successfully');
-			 //window.location.href=AddTopic.php;
-			 //</script>";
 			echo 'Data insert';
+			$topic_id = mysqli_insert_id($conn);
+			
 			
 			
 				$sql = "insert into posts(post_content,post_date,post_topic,post_by)values('$messege',NOW(),$topic_id,$user)";
@@ -47,4 +46,4 @@
 		
 	}
 
-?>zz
+?>

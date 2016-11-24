@@ -17,6 +17,19 @@
         <!--Import Custom CSS -->
         <link href="../css/shop-homepage.css" rel="stylesheet">
 
+        
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fertigo">
+
+        
+        <style type="text/css">
+            body{
+                font-family: 'Fertigo';
+                font-weight: bold;
+                font-size: 16px;
+            }
+         </style>
+
+
 
         <script type="text/javascript">
                 function testsearch(){

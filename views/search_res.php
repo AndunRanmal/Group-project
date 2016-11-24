@@ -135,9 +135,9 @@
 <?php        echo "<h2>A Description About " .$_SESSION["name"]. "</h2>";
         echo "<br/>";
         echo "<img src=\n".$_SESSION['photo']." style='height:400px;width:800px;border:5px solid black;'/\n>";
-        echo "<p>" .$_SESSION["description"]. "</p>";
-        echo "<p id='p2' style='display:none;'>" .$_SESSION["description2"]. "</p>";
-        echo "<p id='p3' style='display:none;'>" .$_SESSION["description3"]. "</p>";
+        echo "<p style='text-align:justify;'>" .$_SESSION["description"]. "</p>";
+        echo "<p id='p2' style='display:none;text-align:justify;'>" .$_SESSION["description2"]. "</p>";
+        echo "<p id='p3' style='display:none;text-align:justify;'>" .$_SESSION["description3"]. "</p>";
 
         echo "<br/> <br/>";
 ?>
