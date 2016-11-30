@@ -25,9 +25,12 @@
 					echo "Posted by: " .$name['F_Name']. " ".$name['L_Name']."<br>";
 					echo "Posted on: " .$row['post_date']."<br>";
 				}
+				echo  "<button style='float:right;' type='button' class='btn btn-info' name='".$row["post_id"]."' id='reply' >Reply to the post</button>";
+				$_SESSION['post_id'] = $row["post_id"];
 			}
-			echo "<button class='btn btn-info' style='float:right; id='reply' name=new_reply data-target='#modal_reply' data-toggle='modal' name='".$row['post_id']."'> Reply to the Post</button>"; 
-			echo "</div><br/><br/>";
+			//echo "<button class='btn btn-info' style='float:right;' id='reply'  name=".row['post_id']."> Reply to the Post</button>"; 
+			
+			echo "</div><br/><br/>";   //data-target='#modal_reply' data-toggle='modal'
 			echo "<hr>";
 			}
 			
@@ -55,6 +58,42 @@
 			</div>
 		</div>
 
+		<?php
+
+			include("../../config/config.php");
+			$post_id = $_SESSION['post_id'];
+			//echo $post_id;
+			$reply = "select * from replies where reply_topic = $post_id order by reply_date DESC";
+			$reply_res = mysqli_query($conn,$reply);
+			
+			if(mysqli_num_rows($reply_res)==0){
+				echo "No replies are for this post yet. You can send a reply and start a conversation";
+			
+			}else{
+				while($row=mysqli_fetch_assoc($reply_res)){
+					echo "<div>";
+						echo "<div style='background-color:#f4ecf7;padding:12px 12px 2px 12px'>";
+							$user = "select * from user where uid =".$row['reply_by'];
+							$res_user = mysqli_query($conn,$user);
+							while($y=mysqli_fetch_assoc($res_user)){
+								$fname = $y['F_Name'];
+								$lname = $y['L_Name'];
+							} 
+							echo "<div style='clear:both;'>";
+							echo "<p>Replied by: " .$fname. " ".$lname."</p>";
+							
+							echo "</div>";
+						echo "</div>";
+						echo "<div style='background-color:#e8f8f5;padding:12px 12px 2px 12px'>";
+							echo "<p>" .$row['reply_content']."</p>";
+							echo "<p >Replied on: ".date('d-m-Y',strtotime($row['reply_date']))."</p>";
+							
+						echo "</div><br/><br/>";
+					echo "</div>";
+				}
+			}
+		?>
+
 
 	</div>
 </div>
@@ -75,20 +114,21 @@
 						alert("Reply has add to the post Successfully!");
 						$('#AddReply')[0].reset();
 						$('#modal_reply').modal('hide');
+						location.reload();
+
 						
 					}
 				})
 			}
 		})
 	})
-
+	//$('.row').on('click','#new_topic',function(){
 	$('.row').on('click','#reply',function(){
 		var ele = $(this).attr("name");
 		console.log(ele);
 		$('#post_id').val(ele);
 		$('#modal_reply').modal('show');
-	});
+	})
 </script>
 
 	
-</script>

@@ -61,9 +61,10 @@
 			echo "<table class='table table-hover' style='align:center;'>";
 			 		echo "<thead>";
 			 			echo "<tr>";
-				 			echo "<th><h3>Topic Subject</h3></th>";
-				 			echo "<th><h3>Post Date</h3></th>";
-				 			echo "<th><h3>Started by</h3></th>";
+				 			echo "<th>Topic Subject</th>";
+				 			echo "<th>Post Date</th>";
+				 			echo "<th>Started by</th>";
+				 			echo "<th>Last reply on";
 				 		echo "</tr>";
 				 	echo "</thead>";
 			while($row = mysqli_fetch_assoc($result)){
@@ -74,7 +75,7 @@
 				 		
 				 		echo "<tr class='row1'>";
 				 			echo "<td>";
-				 			echo "<a href='view_post.php?ref=$id&name=$name'><h4>" .$row['topic_subject']."</h4>";
+				 			echo "<a href='view_post.php?ref=$id&name=$name'>" .$row['topic_subject'];
 				 			echo "</td>";
 				 			echo "<td>";
 				 			echo date('d-m-Y',strtotime($row['topic_date']));
@@ -83,9 +84,20 @@
 				 			$name = "select F_Name from user where uid=".$row['topic_by'];
 				 			$res = mysqli_query($conn,$name);
 				 			while($x = mysqli_fetch_assoc($res)){
-				 				echo "<h4>" .$x['F_Name']. "</h4>";
+				 				echo $x['F_Name'];
 				 			}
 				 			echo "</td>";
+				 			echo "<td>";
+				 			$last_reply = "select reply_date from replies where reply_topic = $id ORDER BY reply_id DESC LIMIT 1";
+				 			$last_res = mysqli_query($conn,$last_reply);
+				 			if(mysqli_num_rows($last_res)==0){
+				 				echo "No reply yet";
+				 			}else{
+				 				while($y = mysqli_fetch_assoc($last_res)){
+					 				echo date('d-m-Y',strtotime($y['reply_date']));
+					 			}
+				 			}
+					 			
 				 		echo "</tr>";
 				 		
 				 	echo "<tbody>";
