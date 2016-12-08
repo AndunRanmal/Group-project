@@ -62,7 +62,7 @@
                     <li>
                         <a href="#">About Us</a>
                     </li>
-                    <li>
+                     <li>
                     <?php
                     session_start();
                     if ($user = $_SESSION["uid"]){
@@ -72,7 +72,7 @@
                     }
 
                     ?>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#">Contact US</a>
                     </li>

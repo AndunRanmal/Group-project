@@ -1,7 +1,7 @@
 <?php
  include ("../../config/config.php");
  include("../include/header.php");
-
+ 
  
  $cat = $_SESSION["cat_id"];
  $photo = $_SESSION["photo"];

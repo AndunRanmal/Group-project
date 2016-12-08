@@ -6,7 +6,7 @@
 		if(preg_match("/^[a-zA-Z]+/", $_GET["search"])){
 			$val = $_GET["search"];
 
-			$sql = "select * from `places` where `name` like '$val'";
+			$sql = "select * from `places` where `name` like '%$val%'";
 
 			$res = mysqli_query($conn,$sql);
 			if(mysqli_num_rows($res)==1){

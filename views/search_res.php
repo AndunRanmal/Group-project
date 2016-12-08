@@ -18,7 +18,8 @@
           href="https://fonts.googleapis.com/css?family=Droid Sans">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Josefin Slab">
-
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Fontin-Sans">
      
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -28,9 +29,8 @@
     <style>
      
       p{
-        font-family: 'Droid Sans';
-        font-weight: bold;
-        font-size: 16px;
+        font-family: 'Fontin-Sans';
+        font-size: 17px;
       }
       h4{
         font-family: 'Droid Sans';
@@ -111,7 +111,6 @@
             echo "<h4>Name: ".$_SESSION["name"]."</h4>" ;
             echo "<h4>Category: " .$_SESSION["category"]."</h4>";
             echo "<h4>Address: " .$_SESSION["address"]. "</h4>";
-            echo "<h4>Transport: " .$_SESSION["transport"]. "</h4>";
             echo "<br/>";
         ?>    
               
@@ -135,6 +134,7 @@
 <?php        echo "<h2>A Description About " .$_SESSION["name"]. "</h2>";
         echo "<br/>";
         echo "<img src=\n".$_SESSION['photo']." style='height:400px;width:800px;border:5px solid black;'/\n>";
+        echo "<br/><br>";
         echo "<p style='text-align:justify;'>" .$_SESSION["description"]. "</p>";
         echo "<p id='p2' style='display:none;text-align:justify;'>" .$_SESSION["description2"]. "</p>";
         echo "<p id='p3' style='display:none;text-align:justify;'>" .$_SESSION["description3"]. "</p>";
@@ -158,7 +158,8 @@
         echo "There are no any suggestion related to your search!";
     }else{
         while ($row=mysqli_fetch_assoc($res)){
-            echo "<li><a href=''><img src=".$row['photopath']." style='width:200px;height:80px;'>".$row['name']."</a></li></br>";
+            echo "<li><a href=''>".$row['name']."<br> <img src=".$row['photopath']." style='width:200px;height:80px;'></a></li><br>";
+            //echo "<li><a href=''><img src=".$row['photopath']." style='width:200px;height:80px;'><br/>".$row['name']."</a></li></br>";
         }
     }
 

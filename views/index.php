@@ -92,20 +92,7 @@
                         </form>
                     </li>
                 </ul>
-                <?php
-                if(isset($_SESSION["email"])){
-                ?>
-                <div text-align="right">
-                    <h3> Welcome <?php echo $_SESSION['email'];?></h3>
-                    <a href="#" id="logout">Logout</a>
-                    </div>
-                    <?php
-                }else{
-                    ?>
-               <button class="signin" name="login" id="login" data-toggle="modal" data-target="#loginModal">Login</button>
-               <?php
-           }
-           ?>
+               
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->

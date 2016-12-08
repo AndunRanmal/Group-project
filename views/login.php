@@ -3,29 +3,46 @@
 <head>
 	<title>form</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#signup").click(function(){
+    				$("#login").hide();
+    				$("#signup_form").show();
+    		});
+    	});
+
+    	$(document).ready(function(){
+    		$("#signin").click(function(){
+    			$("#login").show();
+    			$("#signup_form").hide();
+    		});
+    	});
+    </script>
 	<script type="text/javascript">
 		function testform(){
-			if(document.signin.FName.value==''){
+			if(document.signup.FName.value==''){
 				alert("Please enter your First Name");
 				return false;
 			}
-			if(document.signin.LName.value==''){
+			if(document.signup.LName.value==''){
 				alert("Please enter your last Name");
 				return false;
 			}
-			if(document.signin.email.value==''){
+			if(document.signup.email.value==''){
 				alert("Please enter your email address");
 				return false;
 			}
-			if(document.signin.pass.value==''){
+			if(document.signup.pass.value==''){
 				alert("Please enter your password");
 				return false;
 			}
-			if(document.signin.confirm_pass.value==''){
+			if(document.signup.confirm_pass.value==''){
 				alert("Please enter your confirm password");
 				return false;
 			}
-			if(document.signin.pass.value!=document.signin.confirm_pass.value){
+			if(document.signup.pass.value!=document.signin.confirm_pass.value){
 				alert("Your confirm password and password doesn't match");
 				return false;
 			}
@@ -43,6 +60,72 @@
 			}
 			return confirm("Login as a user");
 		}
+
+		function validateFName(x){
+	      // Validation rule
+	      var re = /[A-Za-z -']$/;
+	      // Check input
+	      if(re.test(document.getElementById(x).value)){
+	        // Style green
+	        document.getElementById(x).style.background ='#ccffcc';
+	        // Hide error prompt
+	        document.getElementById('FnameError').style.display = "none";
+	        return true;
+	      }else{
+	        // Style red
+	        document.getElementById(x).style.background ='#e35152';
+	        // Show error prompt
+	        document.getElementById('FnameError').style.display = "block";
+	        return false; 
+	      }
+	    }
+
+	    function validateLName(x){
+	      // Validation rule
+	      var re = /[A-Za-z -']$/;
+	      // Check input
+	      if(re.test(document.getElementById(x).value)){
+	        // Style green
+	        document.getElementById(x).style.background ='#ccffcc';
+	        // Hide error prompt
+	        document.getElementById('LnameError').style.display = "none";
+	        return true;
+	      }else{
+	        // Style red
+	        document.getElementById(x).style.background ='#e35152';
+	        // Show error prompt
+	        document.getElementById('LnameError').style.display = "block";
+	        return false; 
+	      }
+	    }
+
+		// Validate email
+	    function validateEmail(email2){ 
+	      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	      if(re.test(email2)){
+	        document.getElementById('email2').style.background ='#ccffcc';
+	        document.getElementById('emailError').style.display = "none";
+	        return true;
+	      }else{
+	        document.getElementById('email2').style.background ='#e35152';
+	        document.getElementById('emailError').style.display = "block";
+	        return false;
+	      }
+	    }
+
+	    //validate password
+	    function validatePass(pass){
+	    	var re = /^(?=.*\d)(?=.*[a-z]).{6,}$/;
+	    	if(re.test(pass)){
+	    		document.getElementById('pass').style.background ='#ccffcc';
+	    		document.getElementById('passError').style.display = "none";
+	    		return true;
+	    	}else{
+	    		document.getElementById('pass').style.background = '#e35152';
+	    		document.getElementById('passError').style.display = "block";
+	    		return false;
+	    	}
+	    }
 	</script>
 
 </head>
@@ -76,57 +159,63 @@
             </div>
             </div>
             </nav>
-	<div class="container-fluid">
-		<div class="col-md-6" style="padding:70px 60px 0 10px;">
-			<h3 style="text-align:center;color:#0076a3;"><label>Log In</label></h3>
-			<img src="images/user.png" style="width:100px;height:100px;">
-			<form name="login" action="../php/login.php" method="post" onSubmit="return testlogin()">
-			<div class="form-horizontal">
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" name="email" id="email" placeholder="Enter your Email address" class="form-control">
-				</div>
-				<div class="form-group">
-					<label for="pass">Password:</label>
-					<input type="password" name="pass" id="pass" placeholder="Enter your password" class="form-control">
-				</div>
-				<div class="check-box">
-					<label><input type="checkbox" name="checkbox">Remember me</label>
-				</div>
-				<input type="submit" name="submit" class="btn btn-info btn-block" value="Login">
-			</div>
-			</form>
-		</div>
+	<br>
+<br>
+<br><br>
+<div class="container">
+<div class="row">
+<!-- Signup and Login area -->
 
-		<div class="col-md-6" style="padding:70px 60px 0 10px;">
-			<h3 style="text-align:center;color:#0076a3;"><label>Sign Up Form</label></h3>
-			<form name="signin" method="post" action="../php/signup.php" onSubmit="return testform()">
-				<div class="form-horizontal">
-					<div class="form-group">
-						<label for="FName">First Name:</label>
-						<input type="text" name="FName" value=""  placeholder="Enter your First name here" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="LName">Last Name:</label>
-						<input type="text" name="LName" value="" id="LName" placeholder="Enter your Last name here" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="email">Email:</label>
-						<input type="email" name="email" value="" id="email" placeholder="Enter your Email address here" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="pass">Password:</label>
-						<input type="password" name="pass" value="" id="pass" placeholder="Enter your password here" class="form-control">
-					</div>
-					<div class="form-group">
-						<label for="confirm_pass">Confirm Password:</label>
-						<input type="password" name="confirm_pass" value="" id="confirm_pass" placeholder="Renter your password here" class="form-control">
-					</div>
-					<input type="submit" name="submit" class="btn btn-info btn-block" value="SignUp me as a new user">
-				</div>
-			</form>
-		</div>
-	</div>
+    <!-- Login area -->
+    <div class="forum">
+	    <div class="login" id="login">
+	    <h3>Login to TravelSL</h3>
+	    <hr/>
+	        <form name=login class="login-inner" id="login_form" method="post" action="../php/login.php" onSubmit="return testlogin()">
+	            <input type="email" class="form-control email" placeholder="Email" name="email" id="email" onblur="validateEmail(value)">
+	            <input type="password" class="form-control password" placeholder="Password" name="pass" id="pass1">
+	            <input class="btn btn-block btn-md btn-primary submit" type="submit" name="submit" value="SignIn" >
+	        </form><br>
+	        <label>Register as a new user</label>
+	        <button class="btn btn-block btn-sm btn-primary register" id="signup">SignUp</button>
+	    </div>
+    <!-- Signup area -->
+	     <div id="signup_form" style="display:none;" class="login">
+	        <form name="signup" method="post" action="../php/signup.php" onSubmit="return testform()">
+	            <h3>Register as a new user</h3>
+	            <hr/>
+	            <fieldset>
+	            <input type="text" class="form-control name" placeholder="First Name" name="FName" id="FName" onblur="validateFName(name)">
+	            <span id="FnameError" style="display:none;">Your name must only contain alphebatical letters</span>
+	            </fieldset>
+	            <fieldset>
+	            	<input type="text" class="form-control name" placeholder="Last Name" name="LName" id="LName" onblur="validateLName(name)">
+	            	<span id="LnameError" style="display:none;">Your name must only contain alphebatical letters</span>
+	            </fieldset>
+	            <fieldset>
+	            	<input type="email" class="form-control email" placeholder="Email Address" name="email" id="email2"  onblur="validateEmail(value)">
+	            	<span id="emailError" style="display:none;">Your email address in invalid. Please check again</span>
+	            </fieldset>
+	            <fieldset>
+	            	<input type="password" class="form-control password " placeholder="Password" name="pass" id="pass" onblur="validatePass(value)">
+	            	<span id="passError" style="display:none;">Your password must contain at least a number and lowercase letter</span>	
+	            </fieldset>
+	            <fieldset>
+	            	<input type="password" class="form-control password" placeholder="Confirm your Password" name="confirm_pass" id="confirm_pass">	
+	            	
+	            </fieldset>
+	            <input class="btn btn-block btn-md btn-primary submit" type="submit" name="submit" value="SignUp" >
+	        </form><br>
+	        <label>Already a member?</label>
+	        <button class="btn btn-block btn-sm btn-primary register" id="signin">SignIn</button>
+	    </div>
+    </div>
+
+
+</div>
+</div>
+<!-- End of Signup and Login area -->
 
 </body>
 </html>
+

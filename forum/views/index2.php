@@ -20,7 +20,7 @@
  			<div class="col-md-3">
 
 			 	<?php 
-			            
+			            //session_start();
 			            $user = $_SESSION["uid"];
 			            $sql = "select * from `user` where `uid` ='$user'"; 
 			            $res = mysqli_query($conn,$sql);
@@ -46,21 +46,7 @@
 	                	<button class="btn btn-info btn-sm" formaction="../../php/logout.php" style="width:200px">Logout</button>
 	                	</form><br/>      
 	                </div>
-
-	                <div class="list-group" style="padding:0 40px 10px 0px;">
-	                    <a href="adventure.html" class="list-group-item">Adventure</a>
-	                    <a href="#" class="list-group-item">Historical</a>
-	                    <a href="#" class="list-group-item">Beaches</a>
-	                    <a href="#" class="list-group-item">Sightseeing</a>
-	                    <a href="#" class="list-group-item">Camping</a>
-	                    <a href="#" class="list-group-item">Waterfall hunting</a>
-	                    <a href="#" class="list-group-item">Climate</a>
-	                    <a href="#" class="list-group-item">Cities</a>
-	                    <a href="#" class="list-group-item">Foods</a>
-	                    <a href="#" class="list-group-item">Hotels</a>
-	                </div>
-	                
-	                    
+	               
 	            </div>
 
 	            <div class="col-md-9">
