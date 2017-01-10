@@ -1,5 +1,5 @@
 <?php
-	
+	//import database confi	
 	include("../config/config.php");
 
 	
@@ -11,7 +11,7 @@
 		$pass = $_POST["pass"];
 		$con_pass = $_POST["confirm_pass"];
 
-
+		//insert user data to the database
 
 		$sqluser = "insert into `user` (`F_Name`,`L_Name`,`email`,`password`,`confirm_pass`,`status`) values ('$f_name','$l_name','$email','$pass','$con_pass','0')"; 
 

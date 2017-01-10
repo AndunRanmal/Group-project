@@ -88,8 +88,9 @@
 				 			}
 				 			echo "</td>";
 				 			echo "<td>";
-				 			$last_reply = "select reply_date from replies where reply_topic = $id ORDER BY reply_id DESC LIMIT 1";
+				 			$last_reply = "select reply_date from replies where reply_topic =$id ORDER BY reply_id DESC LIMIT 1";
 				 			$last_res = mysqli_query($conn,$last_reply);
+				 			//echo (mysqli_num_rows($last_res));
 				 			if(mysqli_num_rows($last_res)==0){
 				 				echo "No reply yet";
 				 			}else{

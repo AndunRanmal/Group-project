@@ -31,6 +31,7 @@
 			            }
 
 			           /* echo"<img src='images/user.png' style='width:100px;height:100px;'>";*/
+			          
 			            echo "<img src=\n".$photo." style='height:200px;width:200px;border-radius:50%;'/\n>";
 			           // echo "<img src='data:image/jpeg;base64,".base64_encode($_SESSION["Photo"])."'style='height:150px;width:150px'/>";
 
@@ -157,7 +158,7 @@
  <?php
 	include("../include/footer.php");
 ?>  	
-<script type="text/javascript">
+ <script type="text/javascript">
 	function myFunction(){
 		window.location.href='x.php';
 	}
@@ -176,7 +177,7 @@
 			}else{
 				//console.log($('form').serialize());
 				$.ajax({
-					url : "/project/forum/views/AddTopic.php",
+					url : "/project/Group-project/forum/views/AddTopic.php",
 					method : "POST",
 					data : $('form').serialize(),
 					success:function(data){
@@ -211,7 +212,7 @@
 		console.log(name);
 		$.ajax({
 			
-			url:"/project/forum/views/Topic_view.php",
+			url:"/project/Group-project/forum/views/Topic_view.php",
 			method:"POST",
 			data:{
 				category:name

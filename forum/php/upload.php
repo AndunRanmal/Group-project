@@ -7,7 +7,7 @@ if (isset($_SESSION['uid'])){
 
 
 
-    $target_dir = "../../../profilepic/";
+    $target_dir = "../../../../profilepic/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

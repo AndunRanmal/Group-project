@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +21,12 @@
           href="https://fonts.googleapis.com/css?family=Josefin Slab">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css?family=Fontin-Sans">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fertigo">
+
+        
+        <style type="text/css">
+            
+         </style>
      
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -27,6 +34,11 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <style>
+        body{
+                font-family: 'Fertigo';
+                font-weight: bold;
+                font-size: 16px;
+            }
      
       p{
         font-family: 'Fontin-Sans';
@@ -69,19 +81,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">TourSL</a>
+                <a class="navbar-brand" href="index.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">About Us</a>
                     </li>
                     <li>
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
                 </ul>
                 <form action="../php/search.php" method="get">

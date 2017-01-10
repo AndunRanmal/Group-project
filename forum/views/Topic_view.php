@@ -1,7 +1,7 @@
 <?php
 	include("../include/header.php");
 	include("../../config/config.php");
-	session_start(cat);
+	
 	if(!empty($_POST)){
 	$cat=$_POST["category"];
 

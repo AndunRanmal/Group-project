@@ -17,8 +17,8 @@
         <!--Import Custom CSS -->
         <link href="../css/shop-homepage.css" rel="stylesheet">
 
-        
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fertigo">
+        <!--import google fonts-->    
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fertigo">
 
         
         <style type="text/css">

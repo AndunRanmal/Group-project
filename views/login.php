@@ -4,8 +4,19 @@
 	<title>form</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+	 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fertigo">
+
+        
+        <style type="text/css">
+            body{
+                font-family: 'Fertigo';
+                font-weight: bold;
+                font-size: 16px;
+            }
+         </style>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
+    //show and hide signin and signup forms
     	$(document).ready(function(){
     		$("#signup").click(function(){
     				$("#login").hide();
@@ -21,6 +32,7 @@
     	});
     </script>
 	<script type="text/javascript">
+	//validating signup form
 		function testform(){
 			if(document.signup.FName.value==''){
 				alert("Please enter your First Name");
@@ -42,13 +54,13 @@
 				alert("Please enter your confirm password");
 				return false;
 			}
-			if(document.signup.pass.value!=document.signin.confirm_pass.value){
+			if(document.signup.pass.value!=document.signup.confirm_pass.value){
 				alert("Your confirm password and password doesn't match");
 				return false;
 			}
 			return confirm("Do you want to register as a new user");
 		}
-
+//validating signin form
 		function testlogin(){
 			if(document.login.email.value==''){
 				alert("Please enter your email address");
@@ -60,7 +72,7 @@
 			}
 			return confirm("Login as a user");
 		}
-
+//validating fields in sigup form
 		function validateFName(x){
 	      // Validation rule
 	      var re = /[A-Za-z -']$/;
@@ -146,13 +158,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">About Us</a>
                     </li>
                     <li>
                         <a href="#">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
                 
                 </ul>
@@ -169,20 +181,20 @@
     <!-- Login area -->
     <div class="forum">
 	    <div class="login" id="login">
-	    <h3>Login to TravelSL</h3>
+	    <h3 style="color:#17202A;">Login to TravelSL</h3>
 	    <hr/>
 	        <form name=login class="login-inner" id="login_form" method="post" action="../php/login.php" onSubmit="return testlogin()">
 	            <input type="email" class="form-control email" placeholder="Email" name="email" id="email" onblur="validateEmail(value)">
 	            <input type="password" class="form-control password" placeholder="Password" name="pass" id="pass1">
 	            <input class="btn btn-block btn-md btn-primary submit" type="submit" name="submit" value="SignIn" >
 	        </form><br>
-	        <label>Register as a new user</label>
+	        <label style="color:#17202A;">Register as a new user</label>
 	        <button class="btn btn-block btn-sm btn-primary register" id="signup">SignUp</button>
 	    </div>
     <!-- Signup area -->
 	     <div id="signup_form" style="display:none;" class="login">
-	        <form name="signup" method="post" action="../php/signup.php" onSubmit="return testform()">
-	            <h3>Register as a new user</h3>
+	        <form name="signup" method="post" action="../php/signup.php" onsubmit="return testform()">
+	            <h3 style="color: #17202A;">Register as a new user</h3>
 	            <hr/>
 	            <fieldset>
 	            <input type="text" class="form-control name" placeholder="First Name" name="FName" id="FName" onblur="validateFName(name)">
@@ -206,7 +218,7 @@
 	            </fieldset>
 	            <input class="btn btn-block btn-md btn-primary submit" type="submit" name="submit" value="SignUp" >
 	        </form><br>
-	        <label>Already a member?</label>
+	        <label style="color:#17202A;">Already a member?</label>
 	        <button class="btn btn-block btn-sm btn-primary register" id="signin">SignIn</button>
 	    </div>
     </div>
