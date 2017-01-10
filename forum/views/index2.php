@@ -9,7 +9,7 @@
         <style type="text/css">
             body{
                 font-family: 'Fertigo';
-                font-weight: bold;
+                font-weight: normal;
                 font-size: 16px;
             }
          </style>

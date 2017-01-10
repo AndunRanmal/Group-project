@@ -36,7 +36,7 @@
     <style>
         body{
                 font-family: 'Fertigo';
-                font-weight: bold;
+                font-weight: normal;
                 font-size: 16px;
             }
      
@@ -147,9 +147,9 @@
         echo "<br/>";
         echo "<img src=\n".$_SESSION['photo']." style='height:400px;width:800px;border:5px solid black;'/\n>";
         echo "<br/><br>";
-        echo "<p style='text-align:justify;'>" .$_SESSION["description"]. "</p>";
+        echo "<p style='text-align:justify;'>" .$_SESSION["description1"]. "</p>";
         echo "<p id='p2' style='display:none;text-align:justify;'>" .$_SESSION["description2"]. "</p>";
-        echo "<p id='p3' style='display:none;text-align:justify;'>" .$_SESSION["description3"]. "</p>";
+       // echo "<p id='p3' style='display:none;text-align:justify;'>" .$_SESSION["description3"]. "</p>";
 
         echo "<br/> <br/>";
 ?>

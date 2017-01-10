@@ -18,7 +18,7 @@
 					$cat = $row["category"];
 					$address = $row["address"];
 					$photo = $row["photopath"];
-					$description = $row["description"];
+					$description1 = $row["description1"];
 					$description2 = $row["description2"];
 					$description3 = $row["description3"];
 					$transport = $row["transport"];
@@ -28,7 +28,7 @@
 					$_SESSION["category"] = $cat;
 					$_SESSION["address"] = $address;
 					$_SESSION["photo"] = $photo;
-					$_SESSION["description"] = $description;
+					$_SESSION["description1"] = $description1;
 					$_SESSION["description2"] = $description2;
 					$_SESSION["description3"] = $description3;
 					$_SESSION["transport"] = $transport;

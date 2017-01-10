@@ -176,7 +176,7 @@
                                             <img style="width:320px; height:150px" src="<?php echo $row['photopath']?>" alt="">
                                             <div class="caption">
                                                 <h4><?php echo $row['name']?></h4>
-                                                <p>Nearby City: <?php echo $row['nearCity']?></p>
+                                                <p>Nearby City: <?php echo $row['nearbyCity']?></p>
                 
                                                 <p>
                                                     <a href="<?php echo $row['seeMorePath']?>" class="btn btn-info btn-sm" align="left">See More</a>

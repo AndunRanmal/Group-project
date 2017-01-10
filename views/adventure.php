@@ -128,7 +128,7 @@
                             <img src="<?php echo $row['photopath']?>" alt="">
                             <div class="caption">
                                 <h3><?php echo $row['name']?></h3>
-                                <p><?php echo truncate_string($row['discription'],150); ?></p>
+                                <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
                                     <a href="<?php echo $row['seeMorePath']?>" class="btn btn-primary">See More</a>
                                 </p>

@@ -119,7 +119,7 @@
             <h3>Pick your favourite City to roam</h3>
             <br/>
             <?php
-                $query = "select * from places WHERE category = 'city' order by rand() limit 4  ";
+                $query = "select * from places WHERE category = 'Cities' order by rand() limit 4  ";
                 //$query = "select * from places order by rand() limit 4";
                 $result = mysqli_query($conn,$query);
                 while($row=mysqli_fetch_assoc($result)){
@@ -130,7 +130,7 @@
                             <img src="<?php echo $row['photopath']?>" alt="">
                             <div class="caption">
                                 <h3><?php echo $row['name']?></h3>
-                                <p><?php echo truncate_string($row['discription'],150); ?></p>
+                                <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
                                     <a href="#" class="btn btn-primary">See More</a>
                                 </p>
