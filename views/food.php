@@ -133,7 +133,7 @@
                                 <h3><?php echo $row['name']?></h3>
                                 <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
-                                    <a href="#" class="btn btn-primary">See More</a>
+                                    <a href="<?php echo $row['seeMorePath']?>" class="btn btn-primary">See More</a>
                                 </p>
                             </div>
                         </div>

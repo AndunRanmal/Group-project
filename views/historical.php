@@ -80,7 +80,7 @@
                     <a href="waterfall hunting.php" class="list-group-item">Waterfall hunting</a>
                     <a href="climate.php" class="list-group-item">Climate</a>
                     <a href="cities.php" class="list-group-item">Cities</a>
-                    <a href="food.php" class="list-group-item">Foods</a>
+                    <a href="food.php" class="list-group-item">Food</a>
                     <a href="hotels.php" class="list-group-item">Hotels</a>
                 </div>
     </div>
@@ -118,7 +118,7 @@
             <h3>Pick your favourite Historical sight</h3>
             <br/>
             <?php
-                $query = "select * from places WHERE category = 'cultural' order by rand() limit 4  ";
+                $query = "select * from places WHERE category = 'historical' order by rand() limit 4  ";
                 //$query = "select * from places order by rand() limit 4";
                 $result = mysqli_query($conn,$query);
                 while($row=mysqli_fetch_assoc($result)){
@@ -129,9 +129,9 @@
                             <img src="<?php echo $row['photopath']?>" alt="">
                             <div class="caption">
                                 <h3><?php echo $row['name']?></h3>
-                                <p><?php echo truncate_string($row['discription'],150); ?></p>
+                                <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
-                                    <a href="#" class="btn btn-primary">See More</a>
+                                    <a href="<?php echo $row['seeMorePath']?>" class="btn btn-primary">See More</a>
                                 </p>
                             </div>
                         </div>

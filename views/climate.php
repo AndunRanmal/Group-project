@@ -80,7 +80,7 @@
                     <a href="waterfall hunting.php" class="list-group-item">Waterfall hunting</a>
                     <a href="climate.php" class="list-group-item">Climate</a>
                     <a href="cities.php" class="list-group-item">Cities</a>
-                    <a href="food.php" class="list-group-item">Foods</a>
+                    <a href="food.php" class="list-group-item">Food</a>
                     <a href="hotels.php" class="list-group-item">Hotels</a>
                 </div>
     </div>
@@ -133,7 +133,7 @@
                                 <h3><?php echo $row['name']?></h3>
                                 <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
-                                    <a href="#" class="btn btn-primary">See More</a>
+                                    <a href="<?php echo $row['seeMorePath']?>" class="btn btn-primary">See More</a>
                                 </p>
                             </div>
                         </div>
