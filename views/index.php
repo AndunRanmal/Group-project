@@ -54,7 +54,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="aboutUs.php">About Us</a>
                     </li>
                     <li>
                         <a href="login.php">Forum</a>
@@ -65,9 +65,9 @@
 
                 
 
-            <!-- </div>
+            </div> 
 
-            <!-- Search field
+            <!-- Search field -->
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav"> -->
@@ -76,7 +76,7 @@
 	                <input type="text" name="search" placeholder="Place your search here" class="text">
 	                <input type="submit" name="go" value="Search" class="button">
                	</form>
-</li>
+                </li>
                 </ul>
             </div>
 
