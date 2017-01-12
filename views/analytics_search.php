@@ -68,56 +68,11 @@
     <!-- Page Content -->
 <div class="container">
 
-<h2> Analytics based on</h2>
+<h2> Analytics based on Searches</h2>
 <hr>
 
 
-<div class="card-deck">
-    <div class="col-md-4"
-        <div class="card">
-            <img class="card-img-top" src="images/search.jpg" alt="Card image cap">
-            <div class="card card-outline-primary mb-3 text-center">
-            <div class="card-block">
-            <blockquote class="card-blockquote">
-                <h4 class="card-title">Most Searches</h4>
-                <p>The trend of searches by tourists (local and foreign) can be viewed based on the year.</p>
-                <a href="analytics_search.php" class="btn btn-primary">View Analytics</a>
-            </blockquote>
-            </div>
-            </div>
-        </div>
-    
 
-    <div class="col-md-4"
-        <div class="card">
-            <img class="card-img-top" src="images/ratings.jpg" alt="Card image cap">
-            <div class="card card-outline-primary mb-3 text-center">
-            <div class="card-block">
-            <blockquote class="card-blockquote">
-                <h4 class="card-title">Best Ratings</h4>
-                <p>A tourist's rating after visiting a place is considered as the basis for the analysis.</p>
-                <a href="analytics_ratings.php" class="btn btn-primary">View Analytics</a>
-            </blockquote>
-            </div>
-            </div>
-        </div>
-    
-
-    <div class="col-md-4"
-        <div class="card">
-            <img class="card-img-top" src="images/comments.jpg" alt="Card image cap">
-            <div class="card card-outline-primary mb-3 text-center">
-            <div class="card-block">
-            <blockquote class="card-blockquote">
-                <h4 class="card-title">Most Comments</h4>
-                <p>The analysis is based on the most number of comments for a place by local/foreign tourists.</p>
-                <a href="analytics_comments.php" class="btn btn-primary">View Analytics</a>
-            </blockquote>
-            </div>
-            </div>
-        </div>
-    
-</div>
 
 
 
