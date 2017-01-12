@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $username = "root";
-$password = "root";
-$database = "gproject(1)";
+$password = "";
+$database = "gproject";
 
 $conn = new mysqli("$host","$username","$password","$database");
 if ($conn->connect_error) {

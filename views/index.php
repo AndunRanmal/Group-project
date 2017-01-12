@@ -70,11 +70,8 @@
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-<<<<<<< HEAD
+
                         <a href="contact.php">Contact US</a>
-=======
-                        <a href="#">Contact Us</a>
->>>>>>> 4e9552ee23beb517ecb2cdb26c7bc5c65ef2d402
                     </li>
 
                     </ul>

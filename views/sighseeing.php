@@ -22,9 +22,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-   <!-- Custom CSS -->
+    <!-- Custom CSS -->
     <link href="css/heroic-features.css" rel="stylesheet">
-    <link href="css/shop-homepage1.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,42 +39,33 @@
 
 
     <!-- Navigation -->
-   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="index.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="aboutUs.php">About Us</a>
+                        <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="login.php">Forum</a>
+                        <a href="#">Services</a>
                     </li>
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
-
-                
-
-            </div> 
-
-            <!-- Search field -->
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav"> -->
-                <li>
-                <form action="../php/search.php" method="get">
-                    <input type="text" name="search" placeholder="Place your search here" class="text">
-                    <input type="submit" name="go" value="Search" class="button">
-                </form>
-                </li>
                 </ul>
             </div>
-
+            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
@@ -94,7 +84,7 @@
                     <a href="waterfall hunting.php" class="list-group-item">Waterfall hunting</a>
                     <a href="climate.php" class="list-group-item">Climate</a>
                     <a href="cities.php" class="list-group-item">Cities</a>
-                    <a href="food.php" class="list-group-item">Food</a>
+                    <a href="food.php" class="list-group-item">Foods</a>
                     <a href="hotels.php" class="list-group-item">Hotels</a>
                 </div>
     </div>
@@ -130,7 +120,7 @@
 
         <!-- Loading records from the database -->
         <div class="row text-center">
-            <h3>Pick your favourite destination for Sightseeing</h3>
+            <h3>Where do you want to sightsee</h3>
             <br/>
             <?php
                 $query = "select * from places WHERE category = 'sightseeing' order by rand() limit 4  ";
@@ -146,11 +136,7 @@
                                 <h3><?php echo $row['name']?></h3>
                                 <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
-<<<<<<< HEAD
                                     <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
-=======
-                                    <a href="<?php echo $row['seeMorePath']?>" class="btn btn-primary">See More</a>
->>>>>>> 4e9552ee23beb517ecb2cdb26c7bc5c65ef2d402
                                 </p>
                             </div>
                         </div>
