@@ -29,7 +29,7 @@
 	 		}
 
 	 		elseif ($status ==  1) {
-	 			echo "You are succesfully login as admin";
+	 			header("Location:../views/analytics.php");
 	 		}
 	 	}
 	 		else{

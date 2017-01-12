@@ -16,7 +16,7 @@
 
         
         <style type="text/css">
-            body{
+            .col-md-9{
                 font-family: 'Fertigo';
                 font-weight: bold;
                 font-size: 16px;

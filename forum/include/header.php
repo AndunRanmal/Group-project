@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+     <link rel="icon" href="logo.ico" type="image/x-icon" />
 
     <title>Forum-TravelSL</title>
 
@@ -55,13 +56,13 @@
                     <?php
                     session_start();
                     if ($user = $_SESSION["uid"]){
-                        echo "<a href='../views/index2.php'>Forum</a>";
+                        echo "<a class='active' href='../views/index2.php'>Forum</a>";
                     }else{
                         echo "<a href='../../views/login.php'>";
                     }
 
                     ?>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
