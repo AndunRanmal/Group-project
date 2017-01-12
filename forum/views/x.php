@@ -56,7 +56,7 @@
 		$result = mysqli_query($conn,$query);
 
 		if (mysqli_num_rows($result)==0){
-			echo "Notopics are added to the category yet";
+			echo "No topics are added to the category yet";
 		}else{
 			echo "<table class='table table-hover' style='align:center;'>";
 			 		echo "<thead>";

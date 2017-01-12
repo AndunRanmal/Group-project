@@ -49,7 +49,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+<<<<<<< HEAD
                         <a href="../../views/aboutUs.php">About Us</a>
+=======
+                        <a href="aboutUs.php">About Us</a>
+>>>>>>> 4e9552ee23beb517ecb2cdb26c7bc5c65ef2d402
                     </li>
                      <li>
                     <?php

@@ -23,6 +23,7 @@ session_start();
 
     <!-- Custom CSS -->
     <link href="../css/shop-item.css" rel="stylesheet">
+    <link href="../css/shop-homepage1.css" rel="stylesheet">
 
 
 </head>
@@ -40,7 +41,7 @@ session_start();
            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="aboutUs.php">About Us</a>
                     </li>
                     <li>
                         <a href="login.php">Forum</a>
@@ -84,7 +85,7 @@ session_start();
                     <a href="../waterfall hunting.php" class="list-group-item">Waterfall hunting</a>
                     <a href="../climate.php" class="list-group-item">Climate</a>
                     <a href="../cities.php" class="list-group-item">Cities</a>
-                    <a href="../food.php" class="list-group-item">Foods</a>
+                    <a href="../food.php" class="list-group-item">Food</a>
                     <a href="../hotels.php" class="list-group-item">Hotels</a>
                 </div>
         </div>
@@ -94,7 +95,7 @@ session_start();
             
 
                 <div class="thumbnail">
-                    <img class="img-responsive" src="../<?php echo $row['photopath']?>" width="800" height="300">
+                    <img class="img-responsive" src="../<?php echo $row['photopath']?>">
                     <div class="caption-full">
                         <h4 class="pull-right"></h4>
                         <h4><?php echo $_SESSION['name']?></a>
@@ -102,6 +103,7 @@ session_start();
                         
                         
 
+<<<<<<< HEAD:views/SeeMore/airballooningKandalamaS.php
                         <p>Category: <strong><?php echo $_SESSION['category']?></strong></p>
                         <p>Address: <strong><?php echo $_SESSION['address']?></strong></p>
                         <p>Distance from Colombo: <strong><?php echo $_SESSION['distance']?></strong></p>
@@ -109,6 +111,15 @@ session_start();
                         <p>Ticket information: <strong><?php echo $_SESSION['tickets']?></strong></p>
                         <p><?php echo $_SESSION['description1']?></p>
                         <p><?php echo $_SESSION['description2']?></p>
+=======
+                        <p>Category: <strong><?php echo $row['category']?></strong></p>
+                        <p>Address: <strong><?php echo $row['address']?></strong></p>
+                        <p>Distance from Colombo: <strong><?php echo $row['distance']?></strong></p>
+                        <p>Nearby City: <strong><?php echo $row['nearbyCity']?></strong></p>
+                        <p>Ticket information: <strong><?php echo $row['tickets']?></strong></p>
+                        <p><?php echo $row['description1']?></p>
+                        <p><?php echo $row['description2']?></p>
+>>>>>>> 4e9552ee23beb517ecb2cdb26c7bc5c65ef2d402:views/SeeMore/polonnaruwa.php
 
 
                         <?php
