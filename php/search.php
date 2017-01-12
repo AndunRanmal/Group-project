@@ -22,6 +22,8 @@
 					$description2 = $row["description2"];
 					$description3 = $row["description3"];
 					$transport = $row["transport"];
+					$distance = $row["distance"];
+					$rating = $row["rating"];
 
 					session_start();
 					$_SESSION["name"] = $place;
@@ -32,6 +34,8 @@
 					$_SESSION["description2"] = $description2;
 					$_SESSION["description3"] = $description3;
 					$_SESSION["transport"] = $transport;
+					$_SESSION["distance"] = $distance;
+					$_SESSION["rating"] = $rating; 
 
 					header("Location:../views/search_res.php");
 				

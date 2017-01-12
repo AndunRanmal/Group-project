@@ -3,6 +3,11 @@
 <?php include("../config/config.php"); ?>
 
 <head>
+        <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,6 +73,7 @@
     <!-- Page Content -->
 
     <div class="container">
+    <div class="row">
     <div class="col-md-3">
         <p class="lead">Categories</p>
                 <div class="list-group">
@@ -85,6 +91,7 @@
     </div>
 
         <!-- Jumbotron Header -->
+        <div class="container-fluid">
         <div class="col-md-9">
         <header class="jumbotranHist hero-spacer">
             <img style= "no-repeat center center" src="../TSLphoto/kithulgala.jpg" width="840" height="400" alt="">
@@ -93,11 +100,11 @@
         <hr>
 
         <!-- Title -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-9">
                 
             </div>
-        </div>
+        </div> -->
         </div>
         <br/>
 
@@ -130,7 +137,8 @@
                                 <h3><?php echo $row['name']?></h3>
                                 <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
-                                    <a href="<?php echo $row['seeMorePath']?>" class="btn btn-primary">See More</a>
+                                    <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
+                                   
                                 </p>
                             </div>
                         </div>
@@ -149,13 +157,41 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Download the TravelSL mobile application to surf through Sri Lanka while travelling!</p>
+                    <p>Download the TravelSL mobile ap$lication to surf through Sri Lanka while travelling!</p>
                 </div>
             </div>
         </footer>
 
     </div>
+    </div>
     <!-- /.container -->
+    <script type="text/javascript">
+        function myFunction(){
+        window.location.href='seemore.php';
+    }
+    </script>
+
+
+    <script type="text/javascript">
+        $('.row').on('click','#seemore',function(){
+            var name = $(this).attr('name');
+            console.log(name);
+            $.ajax({
+                url:"/project/Group-project/php/seemore.php",
+                method: "POST",
+                data:{
+                    category:name
+                },
+
+                success:function(data){
+                    console.log("Done"+ data);
+                    //$('#result').html(data);
+            }
+            });
+            
+
+        });
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

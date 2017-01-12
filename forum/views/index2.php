@@ -3,16 +3,9 @@
     include("../../config/config.php");
 ?>
 <head>
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fertigo">
+	<link rel="icon" href="logo.ico" type="image/x-icon" />
 
-        
-        <style type="text/css">
-            body{
-                font-family: 'Fertigo';
-                font-weight: normal;
-                font-size: 16px;
-            }
-         </style>
+    <title>Forum-TravelSL</title>
 </head>
  <div class="container">
 
@@ -95,7 +88,7 @@
 			            $res = mysqli_query($conn,$sql);
 			            if(mysqli_query($conn,$sql)){
 			                if (mysqli_num_rows($res)==0){
-			                    echo ("There isn't any categories posted yet. Add a category and begin to communicate through community.");
+			                    echo ("There aren't any categories posted yet. Add a category and begin communication via the community.");
 			                }else{
 			                	while($row = mysqli_fetch_assoc($res)){
 			                    echo "<div class='col-sm-4 col-lg-4 col-md-4'>";
@@ -136,7 +129,7 @@
 	                					<input type="text" name="subject" class="form-control" id="subject">
 	                					
 	                					<br>
-	                					<label>Messege</label>
+	                					<label>Message</label>
 	                					<textarea name="content" class="form-control" cols="100" rows="5" id="content"></textarea></br>
 	                					<input type="hidden" name="cat_id" id="cat_id">
 	                					<input type="submit" name="submit" value="Add a new Topic" class="btn btn-info" id="submit">

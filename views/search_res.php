@@ -13,6 +13,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet"> 
     <link href="css/shop-homepage.css" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css"
@@ -34,15 +35,16 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <style>
-        body{
+        /*body{
                 font-family: 'Fertigo';
                 font-weight: normal;
                 font-size: 16px;
             }
-     
+*/     
       p{
         font-family: 'Fontin-Sans';
         font-size: 17px;
+        font-weight: normal;
       }
       h4{
         font-family: 'Droid Sans';
@@ -67,6 +69,10 @@
         });
     });
 </script>
+
+<?php
+session_start();
+?>
   
 </head>
 <body>
@@ -105,7 +111,7 @@
         <!-- /.container -->
     </nav>
 
-</body>
+
 
 <div class="container">
 
@@ -117,12 +123,27 @@
                 
                 <div class="list-group" style="padding:0 40px 10px 0px;">
                     
-                    <?php
+            <?php
         /*Calling  the session used in search.php*/
-            session_start();
+          //  session_start();
             echo "<h4>Name: ".$_SESSION["name"]."</h4>" ;
             echo "<h4>Category: " .$_SESSION["category"]."</h4>";
             echo "<h4>Address: " .$_SESSION["address"]. "</h4>";
+            echo "<h4>Distance from Colombo: ".$_SESSION["distance"]."</h4>";
+            echo "<h4>Rating: </h4>";
+            $rate = $_SESSION["rating"];
+            
+            for($x=1;$x<=$rate;$x++) {
+                echo '<img style="height:25px;width:25px;" src="images/Full_star.jpg" />';
+            }
+            if (strpos($rate,'.')) {
+                echo '<img style="height:25px;width:25px;" src="images/half_star.jpg" />';
+                $x++;
+            }
+            while ($x<=5) {
+                echo '<img style="height:25px;width:25px;" src="images/blank_star.png" />';
+                $x++;
+            }
             echo "<br/>";
         ?>    
               
@@ -151,17 +172,18 @@
         echo "<p id='p2' style='display:none;text-align:justify;'>" .$_SESSION["description2"]. "</p>";
        // echo "<p id='p3' style='display:none;text-align:justify;'>" .$_SESSION["description3"]. "</p>";
 
-        echo "<br/> <br/>";
+        //echo "<br/>";
 ?>
-<button class='btn btn-info' id='seemore'>See more</button>
-
+<button class='btn btn-info sm' id='seemore'>See more</button><hr/>
+</div>
+<div class="row text-center">
 <h4>You may also interested in following</h4>
 
 <?php
     include("../config/config.php");
     $cat=$_SESSION["category"];
 
-    $sql="select * from `places` where `category`= '$cat'";
+    $sql="select * from `places` where `category`= '$cat' order by rand() limit 4";
     $res=mysqli_query($conn,$sql);
     
 
@@ -170,8 +192,25 @@
         echo "There are no any suggestion related to your search!";
     }else{
         while ($row=mysqli_fetch_assoc($res)){
-            echo "<li><a href=''>".$row['name']."<br> <img src=".$row['photopath']." style='width:200px;height:80px;'></a></li><br>";
+            //echo "<li><a href=''>".$row['name']."<br> <img src=".$row['photopath']." style='width:200px;height:80px;'></a></li><br>";
             //echo "<li><a href=''><img src=".$row['photopath']." style='width:200px;height:80px;'><br/>".$row['name']."</a></li></br>";
+            ?>
+            
+        
+            <div class="col-md-3 col-sm-6 hero-feature">
+                        <div class="thumbnail">
+                            <img src="<?php echo $row['photopath']?>" alt="">
+                            <div class="caption">
+                                <h3><?php echo $row['name']?></h3>
+                                <p>
+                                    <button class="btn btn-info" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();"">See More</button>
+                                   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                
+    <?php
         }
     }
 
@@ -180,5 +219,34 @@
 
 </div>
 </div>
+</div>
+</body>
 
+ <script type="text/javascript">
+        function myFunction(){
+        window.location.href='seemore.php';
+    }
+    </script>
+
+
+    <script type="text/javascript">
+        $('.row').on('click','#seemore',function(){
+            var name = $(this).attr('name');
+            console.log(name);
+            $.ajax({
+                url:"/project/Group-project/php/seemore.php",
+                method: "POST",
+                data:{
+                    category:name
+                },
+
+                success:function(data){
+                    console.log("Done"+ data);
+                    //$('#result').html(data);
+            }
+            });
+            
+
+        });
+    </script>
 </html>

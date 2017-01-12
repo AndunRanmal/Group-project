@@ -4,6 +4,10 @@
 <?php include("../config/config.php"); ?>
 
 <head>
+ <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -133,7 +137,7 @@
                                 <h3><?php echo $row['name']?></h3>
                                 <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
-                                    <a href="#" class="btn btn-primary">See More</a>
+                                    <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
                                 </p>
                             </div>
                         </div>
@@ -159,6 +163,33 @@
 
     </div>
     <!-- /.container -->
+    <script type="text/javascript">
+        function myFunction(){
+        window.location.href='seemore.php';
+    }
+    </script>
+
+
+    <script type="text/javascript">
+        $('.row').on('click','#seemore',function(){
+            var name = $(this).attr('name');
+            console.log(name);
+            $.ajax({
+                url:"/project/Group-project/php/seemore.php",
+                method: "POST",
+                data:{
+                    category:name
+                },
+
+                success:function(data){
+                    console.log("Done"+ data);
+                    //$('#result').html(data);
+            }
+            });
+            
+
+        });
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

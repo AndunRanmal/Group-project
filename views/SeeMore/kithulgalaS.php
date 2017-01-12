@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("../../config/config.php"); ?>
+<?php include("../../config/config.php"); 
+session_start();
+?>
 
 <head>
 
@@ -13,7 +15,7 @@
 
     <link rel="icon" href="logo.ico" type="image/x-icon" />
 
-    <title>Kitulgala</title>
+    <title><?php echo $_SESSION["name"]?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -78,32 +80,27 @@
 
             <div class="col-md-9">
 
-            <?php
-                $query = "select * from places WHERE pid = '1'";
-                $result = mysqli_query($conn,$query);
-                while($row=mysqli_fetch_assoc($result)){
-            ?>
+            
 
                 <div class="thumbnail">
-                    <img class="img-responsive" src="../<?php echo $row['photopath']?>" width="800" height="300">
+                    <img class="img-responsive" src="../<?php echo $_SESSION['photopath']?>" width="800" height="300">
                     <div class="caption-full">
                         <h4 class="pull-right"></h4>
-                        <h4>Kitulgala White Water Rafting</a>
+                        <h4><?php echo $_SESSION["name"]?></a>
                         </h4>
                         
                         
 
-                        <p>Category: <strong><?php echo $row['category']?></strong></p>
-                        <p>Address: <strong><?php echo $row['address']?></strong></p>
-                        <p>Distance from Colombo: <strong><?php echo $row['distance']?></strong></p>
-                        <p>Nearby City: <strong><?php echo $row['nearCity']?></strong></p>
-                        <p>Ticket information: <strong><?php echo $row['tickets']?></strong></p>
-                        <p><?php echo $row['discription']?></p>
+                        <p>Category: <strong><?php echo $_SESSION['category']?></strong></p>
+                        <p>Address: <strong><?php echo $_SESSION['address']?></strong></p>
+                        <p>Distance from Colombo: <strong><?php echo $_SESSION['distance']?></strong></p>
+                        <p>Nearby City: <strong><?php echo $_SESSION['nearbyCity']?></strong></p>
+                        <p>Ticket information: <strong><?php echo $_SESSION['tickets']?></strong></p>
+                        <p><?php echo $_SESSION['description1']?></p>
+                        <p><?php echo $_SESSION['description1']?></p>
 
 
-                        <?php
-                    }
-                    ?>
+                    
 
                     </div>
                     <div class="ratings">

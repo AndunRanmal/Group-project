@@ -4,7 +4,11 @@
 <?php include("../config/config.php"); ?>
 
 <head>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +27,7 @@
 
     <!--import google api-->
     <script src="http://maps.googleapis.com/maps/api/js"></script>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			function initialize(){
 				var Colombo=new google.maps.LatLng(6.9271,79.8612);
 				var mapProp={
@@ -38,29 +42,35 @@
 				marker.setMap(map);
 			}
 			google.maps.event.addDomListener(window,'load',initialize);
-		</script>	
-
+		</script>	 -->
+</head>
 <body>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++ Navigation ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-</head>
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="index.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="aboutUs.php">About Us</a>
                     </li>
                     <li>
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="contact.php">Contact US</a>
                     </li>
 
                 
@@ -179,7 +189,8 @@
                                                 <p>Nearby City: <?php echo $row['nearbyCity']?></p>
                 
                                                 <p>
-                                                    <a href="<?php echo $row['seeMorePath']?>" class="btn btn-info btn-sm" align="left">See More</a>
+                                                    <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
+                                                    <!-- <a href="<?php echo $row['seeMorePath']?>" class="btn btn-info btn-sm" align="left">See More</a> -->
                                                 </p>
                                             </div>
                                         </div>
@@ -209,6 +220,33 @@
 
     </div>
     <!-- /.container -->
+    <script type="text/javascript">
+        function myFunction(){
+        window.location.href='seemore.php';
+    }
+    </script>
+
+
+    <script type="text/javascript">
+        $('.row').on('click','#seemore',function(){
+            var name = $(this).attr('name');
+            console.log(name);
+            $.ajax({
+                url:"/project/Group-project/php/seemore.php",
+                method: "POST",
+                data:{
+                    category:name
+                },
+
+                success:function(data){
+                    console.log("Done"+ data);
+                    //$('#result').html(data);
+            }
+            });
+            
+
+        });
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

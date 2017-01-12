@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("../../config/config.php"); ?>
+<?php include("../../config/config.php");
+session_start();
+ ?>
 
-<?php
-                $query = "select * from places WHERE pid = '5'";
-                $result = mysqli_query($conn,$query);
-                while($row=mysqli_fetch_assoc($result)){
-            ?>
 
 <head>
 
@@ -19,7 +16,7 @@
 
     <link rel="icon" href="logo.ico" type="image/x-icon" />
 
-    <title><?php echo $row['name']?></title>
+    <title><?php echo $_SESSION["name"]?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +37,7 @@
                 <a class="navbar-brand" href="index.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="#">About Us</a>
@@ -52,20 +49,20 @@
                         <a href="#">Contact US</a>
                     </li>
 
-                </ul>
+                
 
-            </div>
+            <!-- </div>
 
-            <!-- Search field -->
+            <!-- Search field
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-
+                <ul class="nav navbar-nav"> -->
+                <li>
                 <form action="../php/search.php" method="get">
                     <input type="text" name="search" placeholder="Place your search here" class="text">
                     <input type="submit" name="go" value="Search" class="button">
                 </form>
-
+                </li>
                 </ul>
             </div>
 
@@ -75,6 +72,7 @@
 
     <!-- Page Content -->
      <div class="container">
+     <div class="row">
         <div class="col-md-3">
             <p class="lead">Categories</p>
                 <div class="list-group">
@@ -99,21 +97,22 @@
                     <img class="img-responsive" src="../<?php echo $row['photopath']?>" width="800" height="300">
                     <div class="caption-full">
                         <h4 class="pull-right"></h4>
-                        <h4><?php echo $row['name']?></a>
+                        <h4><?php echo $_SESSION['name']?></a>
                         </h4>
                         
                         
 
-                        <p>Category: <strong><?php echo $row['category']?></strong></p>
-                        <p>Address: <strong><?php echo $row['address']?></strong></p>
-                        <p>Distance from Colombo: <strong><?php echo $row['distance']?></strong></p>
-                        <p>Nearby City: <strong><?php echo $row['nearCity']?></strong></p>
-                        <p>Ticket information: <strong><?php echo $row['tickets']?></strong></p>
-                        <p><?php echo $row['discription']?></p>
+                        <p>Category: <strong><?php echo $_SESSION['category']?></strong></p>
+                        <p>Address: <strong><?php echo $_SESSION['address']?></strong></p>
+                        <p>Distance from Colombo: <strong><?php echo $_SESSION['distance']?></strong></p>
+                        <p>Nearby City: <strong><?php echo $_SESSION['nearbyCity']?></strong></p>
+                        <p>Ticket information: <strong><?php echo $_SESSION['tickets']?></strong></p>
+                        <p><?php echo $_SESSION['description1']?></p>
+                        <p><?php echo $_SESSION['description2']?></p>
 
 
                         <?php
-                    }
+                    
                     ?>
 
                     </div>
@@ -186,7 +185,7 @@
             </div>
 
         </div>
-
+        </div>
     </div>
     <!-- /.container -->
 
