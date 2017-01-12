@@ -9,6 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+
     <title>Analytics - TravelSL</title>
 
     <!-- Bootstrap Core CSS -->
@@ -38,7 +40,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">TravelSL</a>
+                <a class="navbar-brand" href="index1.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -50,29 +52,77 @@
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
+                        <a href="contact_interface.php">Contact Us</a>
+                    </li>
+                    <li class="active">
                         <a href="analytics.php">Analytics</a>
                     </li>
 
-                </ul>
-
-            </div>
+                    </ul>
+            </div> 
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
 
     <!-- Page Content -->
- <div class="container">
-    <div class="col-md-3">
-        <p class="lead"><strong>Analytics based on</strong></p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Most Searches</a>
-                    <a href="#" class="list-group-item">Most Comments</a>
-                    <a href="#" class="list-group-item">Best Ratings</a>
-                    <a href="#" class="list-group-item">Most Visited</a>
-                    
-                </div>
-    </div>
+<div class="container">
+
+<h2> Analytics based on</h2>
+<hr>
+
+
+<div class="card-deck">
+    <div class="col-md-4"
+        <div class="card">
+            <img class="card-img-top" src="images/search.jpg" alt="Card image cap">
+            <div class="card card-outline-primary mb-3 text-center">
+            <div class="card-block">
+            <blockquote class="card-blockquote">
+                <h4 class="card-title">Most Searches</h4>
+                <p>The trend of searches by tourists (local and foreign) can be viewed based on the year.</p>
+                <a href="#" class="btn btn-primary">View Analytics</a>
+            </blockquote>
+            </div>
+            </div>
+        </div>
+    
+
+    <div class="col-md-4"
+        <div class="card">
+            <img class="card-img-top" src="images/ratings.jpg" alt="Card image cap">
+            <div class="card card-outline-primary mb-3 text-center">
+            <div class="card-block">
+            <blockquote class="card-blockquote">
+                <h4 class="card-title">Best Ratings</h4>
+                <p>A tourist's rating after visiting a place is considered as the basis for the analysis.</p>
+                <a href="#" class="btn btn-primary">View Analytics</a>
+            </blockquote>
+            </div>
+            </div>
+        </div>
+    
+
+    <div class="col-md-4"
+        <div class="card">
+            <img class="card-img-top" src="images/comments.jpg" alt="Card image cap">
+            <div class="card card-outline-primary mb-3 text-center">
+            <div class="card-block">
+            <blockquote class="card-blockquote">
+                <h4 class="card-title">Most Comments</h4>
+                <p>The analysis is based on the most number of comments for a place by local/foreign tourists.</p>
+                <a href="#" class="btn btn-primary">View Analytics</a>
+            </blockquote>
+            </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+</div>
+ 
 
     </div>
     <!-- /.container -->

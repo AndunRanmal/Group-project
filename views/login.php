@@ -161,7 +161,7 @@
                     <li>
                         <a href="aboutUs.php">About Us</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
