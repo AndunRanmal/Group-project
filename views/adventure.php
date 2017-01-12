@@ -96,7 +96,7 @@
         <!-- Jumbotron Header -->
         <div class="col-md-9">
         <header class="jumbotranHist hero-spacer">
-            <img style= "no-repeat center center" src="../TSLphoto/kithulgala.jpg" width="840" height="400" alt="">
+            <img class="img-responsive" style= "width:825px, height:400px" src="../TSLphoto/kithulgala.jpg" alt="">
         </header>
 
         <hr>

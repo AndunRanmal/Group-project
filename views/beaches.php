@@ -98,7 +98,7 @@
         <!-- Jumbotron Header -->
         <div class="col-md-9">
         <header class="jumbotranHist hero-spacer">
-            <img style= "no-repeat center center" src="../TSLphoto/beachMain.jpg" width="840" height="400" alt="">
+            <img class="img-responsive" style= "no-repeat center center" src="../TSLphoto/beachMain.jpg" width="840" height="400" alt="">
         </header>
 
         <hr>

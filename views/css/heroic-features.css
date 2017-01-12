@@ -12,6 +12,12 @@ body {
     margin-top: 50px;
 }
 
+.container  .img-responsive {
+    display: block;
+    width: 825px;
+    height: 400px;
+}
+
 .hero-feature {
     margin-bottom: 30px;
 }
