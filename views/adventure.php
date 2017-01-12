@@ -50,7 +50,7 @@
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
 
                 
@@ -100,13 +100,6 @@
         </header>
 
         <hr>
-
-        <!-- Title -->
-        <div class="row">
-            <div class="col-md-9">
-                
-            </div>
-        </div>
         </div>
         <br/>
 

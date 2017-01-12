@@ -60,25 +60,25 @@
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav">
+
+                <form action="../php/search.php" method="get">
+                    <input type="text" name="search" placeholder="Place your search here" class="text">
+                    <input type="submit" name="go" value="Search" class="button">
+                </form>
+
+                </ul>
 
                 
 
             </div> 
 
             <!-- Search field -->
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav"> -->
-                <li>
-                <form action="../php/search.php" method="get">
-	                <input type="text" name="search" placeholder="Place your search here" class="text">
-	                <input type="submit" name="go" value="Search" class="button">
-               	</form>
-                </li>
-                </ul>
-            </div>
 
         </div>
         <!-- /.container -->
@@ -158,7 +158,7 @@
                     </div>
                 </div>
 
-                    <!-- ++++++++++++++++++++++++ Random Places ++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++ Random Places +++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
                     
                     <div class="row">

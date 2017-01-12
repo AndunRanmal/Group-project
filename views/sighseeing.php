@@ -52,7 +52,7 @@
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
 
                 
@@ -126,7 +126,7 @@
 
         <!-- Loading records from the database -->
         <div class="row text-center">
-            <h3>Where do you want to sightsee</h3>
+            <h3>Pick your favourite destination for Sightseeing</h3>
             <br/>
             <?php
                 $query = "select * from places WHERE category = 'sightseeing' order by rand() limit 4  ";
