@@ -13,7 +13,7 @@
 	$res = mysqli_query($conn,$sql);
 
 	if(mysqli_num_rows($res)==0){
-		echo "There are no categories under that";
+		echo "There are no categories under this";
 	}else{
 		while($row = mysqli_fetch_assoc($res)){
 			 $_SESSION["cat_id"] = $row["cat_id"];

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Home Page-TourSL</title>
+    <title>Forum-TravelSL</title>
 
         <!-- Import Bootstrap CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -17,18 +17,7 @@
         <!--Import Custom CSS -->
         <link href="../css/shop-homepage.css" rel="stylesheet">
 
-        <!--import google fonts-->    
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fertigo">
-
         
-        <style type="text/css">
-            body{
-                font-family: 'Fertigo';
-                font-weight: bold;
-                font-size: 16px;
-            }
-         </style>
-
 
 
         <script type="text/javascript">
@@ -60,7 +49,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="aboutUs.php">About Us</a>
                     </li>
                      <li>
                     <?php
@@ -74,7 +63,7 @@
                     ?>
                     </li> -->
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
                     
                 </ul>
