@@ -182,7 +182,7 @@
                                                 <p>Nearby City: <?php echo $row['nearbyCity']?></p>
                 
                                                 <p>
-                                                    <a href="<?php echo $row['seeMorePath']?>" class="btn btn-info btn-sm" align="left">See More</a>
+                                                    <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
                                                 </p>
                                             </div>
                                         </div>
@@ -212,6 +212,33 @@
 
     </div>
     <!-- /.container -->
+    <script type="text/javascript">
+        function myFunction(){
+        window.location.href='seemore.php';
+    }
+    </script>
+
+
+    <script type="text/javascript">
+        $('.row').on('click','#seemore',function(){
+            var name = $(this).attr('name');
+            console.log(name);
+            $.ajax({
+                url:"/project/Group-project/php/seemore.php",
+                method: "POST",
+                data:{
+                    category:name
+                },
+
+                success:function(data){
+                    console.log("Done"+ data);
+                    //$('#result').html(data);
+            }
+            });
+            
+
+        });
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

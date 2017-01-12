@@ -4,11 +4,7 @@
 <?php include("../config/config.php"); ?>
 
 <head>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +23,7 @@
 
     <!--import google api-->
     <script src="http://maps.googleapis.com/maps/api/js"></script>
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			function initialize(){
 				var Colombo=new google.maps.LatLng(6.9271,79.8612);
 				var mapProp={
@@ -42,22 +38,16 @@
 				marker.setMap(map);
 			}
 			google.maps.event.addDomListener(window,'load',initialize);
-		</script>	 -->
-</head>
+		</script>	
+
 <body>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++ Navigation ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
+</head>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="index.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,8 +60,7 @@
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-
-                        <a href="contact.php">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
 
                     </ul>
@@ -191,7 +180,6 @@
                 
                                                 <p>
                                                     <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
-                                                    <!-- <a href="<?php echo $row['seeMorePath']?>" class="btn btn-info btn-sm" align="left">See More</a> -->
                                                 </p>
                                             </div>
                                         </div>

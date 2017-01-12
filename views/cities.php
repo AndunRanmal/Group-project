@@ -4,10 +4,6 @@
 <?php include("../config/config.php"); ?>
 
 <head>
- <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +18,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+   <!-- Custom CSS -->
     <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/shop-homepage1.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,33 +40,41 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="index.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="aboutUs.php">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="login.php">Forum</a>
                     </li>
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
+
+                
+
+            </div> 
+
+            <!-- Search field -->
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav"> -->
+                <li>
+                <form action="../php/search.php" method="get">
+                    <input type="text" name="search" placeholder="Place your search here" class="text">
+                    <input type="submit" name="go" value="Search" class="button">
+                </form>
+                </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+
         </div>
         <!-- /.container -->
     </nav>
-
     <!-- Page Content -->
 
     <div class="container">
@@ -84,7 +89,7 @@
                     <a href="waterfall hunting.php" class="list-group-item">Waterfall hunting</a>
                     <a href="climate.php" class="list-group-item">Climate</a>
                     <a href="cities.php" class="list-group-item">Cities</a>
-                    <a href="food.php" class="list-group-item">Foods</a>
+                    <a href="food.php" class="list-group-item">Food</a>
                     <a href="hotels.php" class="list-group-item">Hotels</a>
                 </div>
     </div>
@@ -136,7 +141,7 @@
                                 <h3><?php echo $row['name']?></h3>
                                 <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
-                                     <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
+                                    <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
                                 </p>
                             </div>
                         </div>

@@ -51,17 +51,11 @@ session_start();
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact US</a>
+                        <a href="#">Contact Us</a>
                     </li>
 
                 
 
-            <!-- </div>
-
-            <!-- Search field
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav"> -->
                 <li>
                 <form action="../php/search.php" method="get">
                     <input type="text" name="search" placeholder="Place your search here" class="text">
@@ -91,7 +85,7 @@ session_start();
                     <a href="waterfall hunting.php" class="list-group-item">Waterfall hunting</a>
                     <a href="climate.php" class="list-group-item">Climate</a>
                     <a href="cities.php" class="list-group-item">Cities</a>
-                    <a href="food.php" class="list-group-item">Foods</a>
+                    <a href="food.php" class="list-group-item">Food</a>
                     <a href="hotels.php" class="list-group-item">Hotels</a>
                 </div>
     </div>
@@ -190,35 +184,7 @@ session_start();
 }
 }
 ?>
-                    <!-- <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            CDE
-                            <span class="pull-right">12 days ago</span>
-                            <p>Great hospitality and alot of fun. Hands on experience of exciting adventures</p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                            GHI
-                            <span class="pull-right">15 days ago</span>
-                            <p>Best place to enjoy with a group of friends. Ticket prices are reasonable.</p>
-                        </div>
-                    </div>
-
-                </div> -->
+               
 
             </div>
 

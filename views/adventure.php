@@ -3,11 +3,6 @@
 <?php include("../config/config.php"); ?>
 
 <head>
-        <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,30 +34,39 @@
 <body>
 
     <!-- Navigation -->
-     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="index.php">TravelSL</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="aboutUs.php">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="login.php">Forum</a>
                     </li>
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
+
+                
+
+            </div> 
+
+            <!-- Search field -->
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav"> -->
+                <li>
+                <form action="../php/search.php" method="get">
+                    <input type="text" name="search" placeholder="Place your search here" class="text">
+                    <input type="submit" name="go" value="Search" class="button">
+                </form>
+                </li>
                 </ul>
             </div>
 
@@ -73,7 +77,6 @@
     <!-- Page Content -->
 
     <div class="container">
-    <div class="row">
     <div class="col-md-3">
         <p class="lead">Categories</p>
                 <div class="list-group">
@@ -85,26 +88,18 @@
                     <a href="waterfall hunting.php" class="list-group-item">Waterfall hunting</a>
                     <a href="climate.php" class="list-group-item">Climate</a>
                     <a href="cities.php" class="list-group-item">Cities</a>
-                    <a href="food.php" class="list-group-item">Foods</a>
+                    <a href="food.php" class="list-group-item">Food</a>
                     <a href="hotels.php" class="list-group-item">Hotels</a>
                 </div>
     </div>
 
         <!-- Jumbotron Header -->
-        <div class="container-fluid">
         <div class="col-md-9">
         <header class="jumbotranHist hero-spacer">
             <img style= "no-repeat center center" src="../TSLphoto/kithulgala.jpg" width="840" height="400" alt="">
         </header>
 
         <hr>
-
-        <!-- Title -->
-        <!-- <div class="row">
-            <div class="col-md-9">
-                
-            </div>
-        </div> -->
         </div>
         <br/>
 
@@ -138,7 +133,6 @@
                                 <p><?php echo truncate_string($row['description1'],150); ?></p>
                                 <p>
                                     <button class="btn btn-primary" id="seemore" name="<?php echo $row['pid']?>" onclick="myFunction();">See More</button>
-                                   
                                 </p>
                             </div>
                         </div>
@@ -157,12 +151,11 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Download the TravelSL mobile ap$lication to surf through Sri Lanka while travelling!</p>
+                    <p>Download the TravelSL mobile application to surf through Sri Lanka while travelling!</p>
                 </div>
             </div>
         </footer>
 
-    </div>
     </div>
     <!-- /.container -->
     <script type="text/javascript">
