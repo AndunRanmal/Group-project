@@ -93,7 +93,7 @@ session_start();
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About Us</a>
+                        <a href="aboutUs.php">About Us</a>
                     </li>
                     <li>
                         <a href="login.php">Forum</a>
@@ -177,7 +177,7 @@ session_start();
 <button class='btn btn-info sm' id='seemore'>See more</button><hr/>
 </div>
 <div class="row text-center">
-<h4>You may also interested in following</h4>
+<h4>You may also be interested in the following</h4>
 
 <?php
     include("../config/config.php");

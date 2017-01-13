@@ -42,14 +42,25 @@
 			}
 		}else{
 			echo"<script>
-	 			alert('Sorry Your serarch didnt match with any place we have');
+	 			alert('Sorry, your search doesn't match with any place in TravelSL');
 	 			window.location.href='../views/index.php';
 	 		</script>";
 		}
-		
 
 
 	}
+
+	if(preg_match("/^[a-zA-Z]+/", $_GET["search"])){
+			$val = $_GET["search"];
+
+		$year = date("Y");	
+		if($year == '2017')
+			{
+				$sql="UPDATE search_count SET `2017`=`2017` + 1 WHERE `name` = '$val'";
+				$res = mysqli_query($conn,$sql);
+			}
+	}
+		
 }
 	 
 
