@@ -9,9 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <link rel="icon" href="../views/logo.ico" type="image/x-icon" />
 
-    <title>Analytics - TravelSL</title>
+    <title>Analytics-TravelSL</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,16 +20,9 @@
     <style>
     body {
         padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
     </style>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -46,10 +39,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="aboutUs.php">About Us</a>
+                        <a href="../views/aboutUs.php">About Us</a>
                     </li>
                     <li>
-                        <a href="login.php">Forum</a>
+                        <a href="../views/login.php">Forum</a>
                     </li>
                     <li>
                         <a href="#">Contact Us</a>
@@ -75,7 +68,7 @@
 <div class="card-deck">
     <div class="col-md-4"
         <div class="card">
-            <img class="card-img-top" src="images/search.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../views/images/search.jpg" alt="Card image cap">
             <div class="card card-outline-primary mb-3 text-center">
             <div class="card-block">
             <blockquote class="card-blockquote">
@@ -90,7 +83,7 @@
 
     <div class="col-md-4"
         <div class="card">
-            <img class="card-img-top" src="images/ratings.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../views/images/ratings.jpg" alt="Card image cap">
             <div class="card card-outline-primary mb-3 text-center">
             <div class="card-block">
             <blockquote class="card-blockquote">
@@ -105,7 +98,7 @@
 
     <div class="col-md-4"
         <div class="card">
-            <img class="card-img-top" src="images/comments.jpg" alt="Card image cap">
+            <img class="card-img-top" src="../views/images/comments.jpg" alt="Card image cap">
             <div class="card card-outline-primary mb-3 text-center">
             <div class="card-block">
             <blockquote class="card-blockquote">

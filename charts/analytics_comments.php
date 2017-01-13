@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php include("../config/config.php"); ?>
+
 <head>
 
     <meta charset="utf-8">
@@ -9,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <link rel="icon" href="../views/logo.ico" type="image/x-icon" />
 
     <title>Analytics - TravelSL</title>
 
@@ -46,10 +48,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="aboutUs.php">About Us</a>
+                        <a href="../views/aboutUs.php">About Us</a>
                     </li>
                     <li>
-                        <a href="login.php">Forum</a>
+                        <a href="../views/login.php">Forum</a>
                     </li>
                     <li>
                         <a href="#">Contact Us</a>
@@ -68,7 +70,7 @@
     <!-- Page Content -->
 <div class="container">
 
-<h2> Analytics based on Ratings</h2>
+<h2> Analytics based on Comments</h2>
 <hr>
 
 

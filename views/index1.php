@@ -63,7 +63,7 @@
                         <a href="#">Contact Us</a>
                     </li>
                     <li>
-                        <a href="analytics.php">Analytics</a>
+                        <a href="../charts/analytics.php">Analytics</a>
                     </li>
 
                     </ul>
