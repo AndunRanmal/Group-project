@@ -59,7 +59,7 @@
                         <a href="../views/login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="../views/contact.php">Contact Us</a>
                     </li>
                     <li class="active">
                         <a href="analytics.php">Analytics</a>

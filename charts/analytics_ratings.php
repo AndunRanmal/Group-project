@@ -30,6 +30,8 @@
     <!-- scripts -->
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/canvasjs.min.js"></script>
+    <script src="js/jspdf.js"></script>
+    
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -56,7 +58,7 @@
                         <a href="../views/login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="../views/contact.php">Contact Us</a>
                     </li>
                     <li class="active">
                         <a href="analytics.php">Analytics</a>
@@ -71,9 +73,10 @@
 
     <!-- Page Content -->
 <div class="container">
+    
 
-<h2> Analytics based on Ratings</h2>
-<hr>
+
+
 &nbsp;
 &nbsp;
 
@@ -89,7 +92,14 @@ while ($row = mysqli_fetch_assoc($data)) {
 //print_r($rating);
 ?>
 
-                   
+<p align="right"> <!-- <a href="http://selectpdf.com/save-as-pdf/" class="btn btn-info" role="button">Download PDF</a> -->
+    <button type="button" id="print_one" class="btn btn-info">Button</button>
+</p>
+
+<div id="print_me">
+
+<h2> Analytics based on Ratings</h2> 
+<hr>            
 
             <div class="row">
                 <div id="content" class="col-md-12 col-xs-12">
@@ -116,13 +126,46 @@ window.onload = function () {
            
         
     </div>
+
+    
 </div>
 
-
-
+</div>
 
 </div>
 <!-- /.container -->
+<script type="text/javascript">
+$('#print_one').click(function () {
+    printMe();
+});
+$('#print_two').click(function () {
+    printMe('embed');
+    $('#print_one,#print_two').attr('disabled', 'disabled');
+    $('#clearme').show();
+});
+$('#no_print').click(function () {
+    printMe('none');
+    $('#print_one,#print_two').attr('none');
+    $('#clearme').show();
+});
+$('#clearme').click(function () {
+    xepOnline.Formatter.Clear();
+    $('#print_one,#print_two').attr('disabled', null);
+    $('#clearme').hide();
+});
+$('#style_me_2').click(function () {
+    $('#print_me').toggleClass('style_me_2');
+});
+
+function printMe(render) {
+    render = (render === undefined) ? false : render;
+    xepOnline.Formatter.Format('print_me', {
+        render: render,
+        pageMargin: ".25in"
+    });
+}
+
+</script>
 
     
 </body>

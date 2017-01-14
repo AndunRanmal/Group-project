@@ -64,7 +64,7 @@
                     ?>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="../../views/contact.php">Contact Us</a>
                     </li>
                     
                 </ul>

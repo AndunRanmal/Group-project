@@ -51,7 +51,7 @@
                         <a href="login.php">Forum</a>
                     </li>
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="contact.php">Contact Us</a>
                     </li>
 
                 
