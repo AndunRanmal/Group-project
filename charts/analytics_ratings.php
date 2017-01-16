@@ -92,9 +92,9 @@ while ($row = mysqli_fetch_assoc($data)) {
 //print_r($rating);
 ?>
 
-<p align="right"> <!-- <a href="http://selectpdf.com/save-as-pdf/" class="btn btn-info" role="button">Download PDF</a> -->
-    <button type="button" id="print_one" class="btn btn-info">Button</button>
-</p>
+<!-- <p align="right"> 
+    <a href="javascript:void(0);" id="print_button2" style="width: 130px; padding: 5px 8px 5px 8px;text-align: center;float: right;background-color: #1caf9a;color: #fff;text-decoration: none; margin: 10px;" onclick="printPageArea('print_me')">Print Report</a>
+</p> -->
 
 <div id="print_me">
 
@@ -134,37 +134,16 @@ window.onload = function () {
 
 </div>
 <!-- /.container -->
-<script type="text/javascript">
-$('#print_one').click(function () {
-    printMe();
-});
-$('#print_two').click(function () {
-    printMe('embed');
-    $('#print_one,#print_two').attr('disabled', 'disabled');
-    $('#clearme').show();
-});
-$('#no_print').click(function () {
-    printMe('none');
-    $('#print_one,#print_two').attr('none');
-    $('#clearme').show();
-});
-$('#clearme').click(function () {
-    xepOnline.Formatter.Clear();
-    $('#print_one,#print_two').attr('disabled', null);
-    $('#clearme').hide();
-});
-$('#style_me_2').click(function () {
-    $('#print_me').toggleClass('style_me_2');
-});
-
-function printMe(render) {
-    render = (render === undefined) ? false : render;
-    xepOnline.Formatter.Format('print_me', {
-        render: render,
-        pageMargin: ".25in"
-    });
-}
-
+<script>
+    function printPageArea(areaID){
+        var printContent = document.getElementById(areaID);
+        var WinPrint = window.open('', '', 'width=900,height=650');
+        WinPrint.document.write(printContent.innerHTML);
+        WinPrint.document.close();
+        WinPrint.focus();
+        WinPrint.print();
+        WinPrint.close();
+    }
 </script>
 
     

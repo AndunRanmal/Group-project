@@ -170,7 +170,7 @@
             var name = $(this).attr('name');
             console.log(name);
             $.ajax({
-                url:"/project/Group-project/php/seemore.php",
+                url:"/Project/Group-project/php/seemore.php",
                 method: "POST",
                 data:{
                     category:name

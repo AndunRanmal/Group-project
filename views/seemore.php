@@ -188,6 +188,31 @@ session_start();
 
             </div>
 
+            <h3> Post a review </h3>
+
+            <form class="form-horizontal" method="POST" action="../php/comment.php">
+
+                <form class="form-horizontal" role="form">                                   
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" style="text-align:left">Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="uname" placeholder="Your username"/>
+                        </div>
+                    </div>
+
+                <form class="form-horizontal" role="form">                                   
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" style="text-align:left">Comment</label>
+                        <div class="col-md-10">
+                            <textarea name="review" rows="5" cols="94" placeholder="Your review"></textarea>
+                        </div>
+                    </div>
+                <div class="panel-footer">
+                    <button type="reset" class="btn btn-default">Clear</button>
+                    <button type="submit" class="btn btn-primary pull-right" name="Post_Review">Post Review</button>
+                </div> 
+            </form>
+
         </div>
 
     </div>
